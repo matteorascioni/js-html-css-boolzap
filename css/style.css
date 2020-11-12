@@ -28,6 +28,11 @@ input:focus {
     outline: none;
 }
 
+/* UTILITIES */
+.hov {
+    cursor: pointer;
+}
+
 /* LAYOUT */
 .container {
     display: flex;
@@ -135,7 +140,7 @@ input:focus {
 }
 
 .search-bar input[type=text] {
-    padding-left: 80px;
+    padding-left: 75px;
 }
 
 .search-bar i {
@@ -161,7 +166,7 @@ input:focus {
 
 .users:hover {
     cursor: pointer;
-    background-color: rgba(194, 194, 194, 0.116);
+    background-color: rgba(194, 194, 194, 0.205);
 }
 
 .users img {
@@ -174,7 +179,6 @@ input:focus {
 .users span {
     margin-left: 15px;
 }
-
 
 /* MAIN CONTENT */
 .content {
@@ -262,7 +266,6 @@ input:focus {
     border: none;
     border-radius: 5px;
 }
-
 
 .content .footer input[type=text] {
     padding-left: 25px;

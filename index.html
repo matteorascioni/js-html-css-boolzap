@@ -56,38 +56,13 @@
 
             <!-- Utenti chat -->
             <section id="app" class="utenti-chat">
-                <div class="users">
-                    <img src="./img/avatar_1.jpg" alt="">
-                    <span>Michele</span>
-                </div>
-                <div class="users">
-                    <img src="./img/avatar_2.jpg" alt="">
-                    <span>Fabio</span>
-                </div>
-                <div class="users">
-                    <img src="./img/avatar_3.jpg" alt="">
-                    <span>Samuele</span>
-                </div>
-                <div class="users">
-                    <img src="./img/avatar_4.jpg" alt="">
-                    <span>Luisa</span>
-                </div>
-                <div class="users">
-                    <img src="./img/avatar_5.jpg" alt="">
-                    <span>Paolo</span>
-                </div>
-                <div class="users">
-                    <img src="./img/avatar_6.jpg" alt="">
-                    <span>Luigi</span>
-                </div>
-                <div class="users">
-                    <img src="./img/avatar_7.jpg" alt="">
-                    <span>Fabio</span>
-                </div>
-                <div class="users">
-                    <img src="./img/avatar_8.jpg" alt="">
-                    <span>Lorenzo</span>
-                </div>
+                <ul>
+                    <li v-for="item in contacts" class="users">
+                        <img src="./img/avatar_1.jpg" alt="">
+                        {{ item.name }}
+                    </li>
+                </ul>
+                
             </section>
         </aside>
 
@@ -95,7 +70,7 @@
         <main class="content">
             <!-- Header main content -->
             <section class="header">
-                <div class="inside-header">
+                <div class="inside-header hov">
                     <img src="./img/avatar_1.jpg" alt="">
                     <ul>
                         <li>
