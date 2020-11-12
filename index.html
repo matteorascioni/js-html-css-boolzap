@@ -28,7 +28,7 @@
                     <img src="./img/avatar_io.jpg" alt="">
                     <span>Nome Utente</span>
                 </div>
-               <div class="inside-user">
+                <div class="inside-user">
                     <i class="fas fa-circle-notch"></i>
                     <i class="fas fa-comment-alt"></i>
                     <i class="fas fa-ellipsis-v"></i>
@@ -49,9 +49,12 @@
             </section>
 
             <!-- Search bar -->
-            <section class="search-bar">  
-                <input type="text" placeholder="Cerca o inizia una nuova chat">
-                <i class="fas fa-search"></i>
+            <section class="search-bar">
+                <div>
+                    <i class="fas fa-search"></i>  
+                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                </div>
+           
             </section>
 
             <!-- Utenti chat -->
@@ -59,7 +62,7 @@
                 <ul>
                     <li v-for="item in contacts" class="users">
                         <img :src="'img/avatar' + item.avatar + '.jpg'" alt="">
-                         {{ item.name }} 
+                        {{ item.name }} 
                     </li>
                 </ul>
             </section>
@@ -87,7 +90,6 @@
 
             <!-- Message main content -->
             <section class="message">
-                
             </section>
 
             <!-- Footer main content -->
@@ -98,7 +100,6 @@
             </section>
         </main>
     </div>
-
 
     <!-- JAVASCRIPT -->
     <script src="./js/main.js"></script>
