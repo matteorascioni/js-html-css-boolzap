@@ -62,7 +62,7 @@ var app = new Vue({
                 messages: [
                     {
                         date: '28/03/2020 10:10:40',
-                        message: 'La Marianna va in campagna',
+                        message: 'Marianna va in campagna',
                         status: 'received'
                     },
                     {
@@ -90,6 +90,73 @@ var app = new Vue({
                     {
                         date: '10/01/2020 15:50:00',
                         message: 'Si, ma preferirei andare al cinema',
+                        status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Giorgio',
+                avatar: '_5',
+                visible: true,
+                messages: [
+                    {
+                        date: '13/01/2020 16:30:55',
+                        message: 'Usciamo per una birra stasera',
+                        status: 'sent'
+                    },
+                    {
+                        date: '13/01/2020 17:50:00',
+                        message: 'Si, ma solo se andiamo in quel nuovo locale che ha aperto in centro',
+                        status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Paolo',
+                avatar: '_6',
+                visible: true,
+                messages: [
+                    {
+                        date: '12/01/2020 19:30:35',
+                        message: 'Vieni in palestra domani?'
+                    },
+                    {
+                        date: '12/01/2020 15:50:00',
+                        message: 'Si, devo fare petto e gambe',
+                        status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Lorenzo',
+                avatar: '_7',
+                visible: true,
+                messages: [
+                    {
+                        date: '9/01/2020 10:30:25',
+                        message: 'Stasera pizza fuori?',
+                        status: 'sent'
+                    },
+                    {
+                        date: '9/01/2020 15:55:00',
+                        message: 'Si, ma per le 21.30 che prima ho la partita',
+                        status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Luigi',
+                avatar: '_8',
+                visible: true,
+                messages: [
+                    {
+                        date: '28/11/2020 9:30:15',
+                        message: 'E se ti dicessi che dobbiamo iniziare ad organizzare capodanno...',
+                        status: 'sent'
+                    },
+                    {
+                        date: '28/11/2020 17:05:00',
+                        message: 'Ti risponderei che hai sbagliato numero...',
                         status: 'received'
                     }
                 ],
