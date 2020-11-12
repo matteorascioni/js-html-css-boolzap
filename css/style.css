@@ -1,8 +1,10 @@
+/* GENERAL STYLE */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     display: flex;
     justify-content: center;
@@ -16,6 +18,14 @@ body {
         #d8dbd5 15%, 
         #d8dbd5 100%
     );
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+input:focus {
+    outline: none;
 }
 
 /* LAYOUT */
@@ -53,6 +63,14 @@ body {
     max-height: 90px;   
     margin-left: 10px;
     border-radius: 100%;
+}
+
+.inside-user img:hover {
+    cursor: pointer;
+}
+
+.inside-user span:hover {
+    cursor: pointer;
 }
 
 .inside-user i {
@@ -120,15 +138,11 @@ body {
     padding-left: 80px;
 }
 
-.search-bar input:focus {
-    outline: none;
-}
-
 .search-bar i {
     position: absolute;
     font-size: 14px;
     left: 177px;   
-    top: 155px; 
+    top: 157px; 
     color: #b6b9bb;
 }
 
@@ -143,6 +157,11 @@ body {
     align-items: center;
     padding: 10px;
     border-bottom: 1px solid #f5f5f5;
+}
+
+.users:hover {
+    cursor: pointer;
+    background-color: rgba(194, 194, 194, 0.116);
 }
 
 .users img {
