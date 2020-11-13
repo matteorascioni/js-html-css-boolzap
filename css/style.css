@@ -216,14 +216,10 @@ input:focus {
 }
 
 .inside-header img {
-    max-width: 20%;
+    max-width: 50%;
     max-height: 40px;   
     margin-left: 10px;
     border-radius: 100%;
-}
-
-.inside-header ul {
-    margin-left: 10px;
 }
 
 .inside-header ul li {
@@ -232,8 +228,17 @@ input:focus {
 }
 
 .inside-header ul li span {
+    display: flex;
+    flex-direction: column;
     font-size: 14px;
+    margin-left: 10px;
 }
+
+.inside-header ul li > div span:last-child {
+    font-size: 9px;
+    color: #6b7376;
+}
+
 
 .inside-header ul li a {
     font-size: 10px;

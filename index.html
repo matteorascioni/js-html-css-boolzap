@@ -78,12 +78,17 @@
             <section class="header">
                 <div class="inside-header hov">
                     <ul>
-                        <li v-for="(item, index) in contacts" 
-                            @click="contactAction( index)"
-                        >
-                        <img :src="'img/avatar' + item.avatar + '.jpg'" alt="">
-                        {{ item.name }} 
-                    </li>
+                        <li>
+                            <img :src="'img/avatar' + contacts[contactActive].avatar + '.jpg'" alt="">
+                            <div>
+                                <span>
+                                    {{ contacts[contactActive].name }}
+                                </span>
+                                <span class="hdr-span">
+                                    ultimo accesso oggi alle
+                                </span>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div class="inside-header">
