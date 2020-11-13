@@ -14,19 +14,20 @@
     <!-- VUE JS DEVELOP -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <!-- VUE JS PRODUCTION -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script> -->
 </head>
 <body>
 
     <!-- Container -->
-    <div class="container">
+    <div id="app" class="container">
         <!-- Aside bar -->
         <aside id="aside" class="side">
             <!-- Nome utente -->
             <section class="nome-utente">
                 <div class="inside-user">
-                    <img src="./img/avatar_io.jpg" alt="">
-                    <span>Nome Utente</span>
+                    <img :src="'./img/avatar' + user.avatar + '.jpg'" 
+                         :alt="user.name">
+                    {{ user.name }}
                 </div>
                 <div class="inside-user">
                     <i class="fas fa-circle-notch"></i>
@@ -58,9 +59,12 @@
             </section>
 
             <!-- Utenti chat -->
-            <section id="app" class="utenti-chat">
+            <section class="utenti-chat">
                 <ul>
-                    <li v-for="item in contacts" class="users">
+                    <li v-for="(item, index) in contacts" 
+                        class="users"
+                        @click="contactAction(index)"
+                        >
                         <img :src="'img/avatar' + item.avatar + '.jpg'" alt="">
                         {{ item.name }} 
                     </li>
@@ -90,6 +94,26 @@
 
             <!-- Message main content -->
             <section class="message">
+                <div 
+                    v-for="message in contacts[contactActive].messages"
+                    :class="message.status == 'sent' ? 'justify-end': ''"
+                    >
+                    <div 
+                        class="bg-messages"
+                        :class="message.status == 'sent' ? 'bg-green' : ''"        
+                    >  
+                        <div>
+                            <p class="mg-top">
+                                {{ message.message }}
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-right date-color">
+                                {{ message.date }} 
+                            </p>
+                        </div>
+                    </div>   
+                </div>
             </section>
 
             <!-- Footer main content -->

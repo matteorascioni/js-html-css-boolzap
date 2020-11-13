@@ -7,9 +7,10 @@ var app = new Vue({
         // nostro account
         user: {
             name: 'Nome Utente',
-            avatar: '_io'
+            avatar: '_io',
         },
         // Elenco contatti
+        contactActive: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -118,7 +119,8 @@ var app = new Vue({
                 messages: [
                     {
                         date: '12/01/2020 19:30:35',
-                        message: 'Vieni in palestra domani?'
+                        message: 'Vieni in palestra domani?',
+                        status: 'sent'
                     },
                     {
                         date: '12/01/2020 15:50:00',
@@ -163,5 +165,9 @@ var app = new Vue({
             },
         ]
     },
-    methods: {}
+    methods: {
+        contactAction(index) {
+            this.contactActive = index;
+        },
+    }
 });

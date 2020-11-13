@@ -32,7 +32,6 @@ input:focus {
 .hov {
     cursor: pointer;
 }
-
 /* LAYOUT */
 .container {
     display: flex;
@@ -54,7 +53,7 @@ input:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 8%;
+    padding: 11px 0;
     background: #eaeaea;
 }
 
@@ -164,6 +163,7 @@ input:focus {
 .utenti-chat {
     display: flex;
     flex-direction: column;
+    overflow: auto;
 }
 
 .users {
@@ -199,8 +199,8 @@ input:focus {
 .content .header,
 .content .footer {
     display: flex;
-    align-items: center;
-    height: 8%;
+    align-items: center; 
+    height: 8%;   
     border-left: 1px solid #d6d6d6;
     background: #eaeaea;
 }
@@ -208,7 +208,7 @@ input:focus {
 /* CONTENT HEADER */
 .content .header {
     justify-content: space-between;
-}
+}   
 
 .inside-header {
     display: flex;
@@ -254,9 +254,45 @@ input:focus {
 /* CONTENT MESSAGE */
 .content .message {
     flex-grow: 1;
-    padding: 25px;
+    padding: 30px;
     background-image: url('../img/mine.jpg');
     overflow-y: auto;
+}
+
+.message > div {
+    display: flex;
+}
+
+/* CHAT UTILITIES */
+.bg-messages {
+    width: 300px;
+    font-size: 11px;
+    border-radius: 8px;
+    padding: 2px 10px;
+    margin-bottom: 10px;
+    background: #fff; 
+}
+
+.bg-green {
+    background: #d5f8ba; 
+}
+
+.mg-top {
+    margin-top: 11px;
+}
+
+.text-right {
+    margin-left: 10px;
+    text-align: right;
+}
+
+.date-color {
+    font-size: 10px;
+    color: #b6b9bb;
+}
+
+.justify-end {
+    justify-content: flex-end;
 }
 
 /* CONTENT FOOTER */
@@ -284,3 +320,4 @@ input:focus {
 .content .footer input[type=text] {
     padding-left: 25px;
 }
+
