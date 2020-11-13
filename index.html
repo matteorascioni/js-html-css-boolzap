@@ -77,12 +77,13 @@
             <!-- Header main content -->
             <section class="header">
                 <div class="inside-header hov">
-                    <img src="./img/avatar_1.jpg" alt="">
                     <ul>
-                        <li>
-                            <span>Michele</span>
-                            <a href="#">Ultimo accesso oggi alle 10.35</a>
-                        </li>
+                        <li v-for="(item, index) in contacts" 
+                            @click="contactAction( index)"
+                        >
+                        <img :src="'img/avatar' + item.avatar + '.jpg'" alt="">
+                        {{ item.name }} 
+                    </li>
                     </ul>
                 </div>
                 <div class="inside-header">
