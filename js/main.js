@@ -173,9 +173,9 @@ var app = new Vue({
         addMessage() {
             if(this.newMessageContent.trim() != '') {
                 this.contacts[this.contactActive].messages.push({
-                    date: 'la data',
-                     message: this.newMessageContent, 
-                     status: 'sent' 
+                    date: dayjs().format('dddd, DD/MM/YYYY, HH:mm:ss'),
+                    message: this.newMessageContent, 
+                    status: 'sent' 
                });
 
                this.newMessageContent = '';
@@ -183,3 +183,6 @@ var app = new Vue({
         }
     }
 });
+
+
+// Day js 
