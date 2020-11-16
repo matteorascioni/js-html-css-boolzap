@@ -186,10 +186,12 @@ var app = new Vue({
                         message: 'Ok',
                         status: 'received',
                     };
-                    this.contacts[this.indexChat].messages.push(this.newMessage);
+                    this.contacts[this.contactActive].messages.push(this.newMessage);
                 }, 1000);  
             }
         },
+
+        
 
     
 
