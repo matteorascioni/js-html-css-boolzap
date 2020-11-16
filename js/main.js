@@ -10,6 +10,7 @@ var app = new Vue({
             avatar: '_io',
         },
         // Elenco contatti
+        newMessageContent: '',
         contactActive: 0,
         contacts: [
             {
@@ -52,7 +53,7 @@ var app = new Vue({
                     {
                         date: '20/03/2020 16:35:00',
                         message: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                        status: 'received'
+                        status: 'sent'
                     }
                 ],
             },
@@ -169,5 +170,10 @@ var app = new Vue({
         contactAction(index) {
             this.contactActive = index;
         },
+        addMessage() {
+            this.messages.push(this.newMessageContent);
+            
+            this.newMessageContent = '';
+        }
     }
 });

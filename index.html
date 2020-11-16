@@ -85,7 +85,7 @@
                                     {{ contacts[contactActive].name }}
                                 </span>
                                 <span class="hdr-span">
-                                    ultimo accesso oggi alle
+                                    ultimo accesso oggi alle 
                                 </span>
                             </div>
                         </li>
@@ -103,11 +103,11 @@
                 <div 
                     v-for="message in contacts[contactActive].messages"
                     :class="message.status == 'sent' ? 'justify-end': ''"
-                    >
+                >
                     <div 
                         class="bg-messages"
-                        :class="message.status == 'sent' ? 'bg-green' : ''"        
-                    >  
+                        :class="message.status == 'sent' ? 'bg-green' : ''"  
+                    >
                         <div>
                             <p class="mg-top">
                                 {{ message.message }}
@@ -125,7 +125,12 @@
             <!-- Footer main content -->
             <section class="footer">
                 <i class="far fa-smile"></i>
-                <input type="text" placeholder="Scrivi un messaggio">
+                <input 
+                    type="text" 
+                    placeholder="Scrivi un messaggio"
+                    v-model="newMessageContent" 
+                    @keyup.enter="addMessage"
+                >
                 <i class="fas fa-microphone"></i>
             </section>
         </main>
