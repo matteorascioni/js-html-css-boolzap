@@ -171,9 +171,15 @@ var app = new Vue({
             this.contactActive = index;
         },
         addMessage() {
-            this.messages.push(this.newMessageContent);
-            
-            this.newMessageContent = '';
+            if(this.newMessageContent.trim() != '') {
+                this.contacts[this.contactActive].messages.push({
+                    date: 'la data',
+                     message: this.newMessageContent, 
+                     status: 'sent' 
+               });
+
+               this.newMessageContent = '';
+            }
         }
     }
 });
