@@ -176,10 +176,26 @@ var app = new Vue({
                     date: dayjs().format('dddd, DD/MM/YYYY, HH:mm:ss'),
                     message: this.newMessageContent, 
                     status: 'sent' 
-               });
+                });
 
-               this.newMessageContent = '';
+                this.newMessageContent = '';
+
+                setTimeout(() => {
+                    this.newMessage = {
+                        date: dayjs().format('dddd, DD/MM/YYYY, HH:mm:ss'),
+                        message: 'Ok',
+                        status: 'received',
+                    };
+                    this.contacts[this.indexChat].messages.push(this.newMessage);
+                }, 1000);  
             }
-        }
+        },
+
+    
+
+
+
+
+
     }
 });
