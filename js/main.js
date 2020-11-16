@@ -183,6 +183,3 @@ var app = new Vue({
         }
     }
 });
-
-
-// Day js 
