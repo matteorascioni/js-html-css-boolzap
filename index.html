@@ -14,9 +14,9 @@
     <!-- VUE JS DEVELOP -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <!-- DAY JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.9.6/dayjs.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.9.6/dayjs.min.js"></script> -->
     <!-- VUE JS PRODUCTION -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 </head>
 <body>
 
@@ -28,8 +28,9 @@
             <section class="nome-utente">
                 <div class="inside-user">
                     <img :src="'./img/avatar' + user.avatar + '.jpg'" 
-                         :alt="user.name">
-                    {{ user.name }}
+                         :alt="user.name"
+                    >
+                    <span>{{ user.name }}</span>
                 </div>
                 <div class="inside-user">
                     <i class="fas fa-circle-notch"></i>
@@ -57,7 +58,6 @@
                     <i class="fas fa-search"></i>  
                     <input type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
-           
             </section>
 
             <!-- Utenti chat -->
@@ -75,42 +75,10 @@
                             <div class="info">
                                     <span>{{ contact.name }}</span>
                             </div>
-
                         </div>
-
                 </div>
             </section>
         </aside>
-
-
-
-
-
-
-
-
-       
-
- <!-- <ul 
-                    v-for="(item, index) in contacts" 
-                    :class="['contacts', index === contactActive ? 'active' : '']"
-                    @click="setActiveContact(index)"
-                >
-                    <li 
-                        class="users"
-                        @click="contactAction(index)"
-                    >
-                            <img :src="'img/avatar' + item.avatar + '.jpg'" alt="">
-                            {{ item.name }} 
-                    </li>
-                </ul>    -->
-
-
-
-
-
-
-
 
         <!-- Main message -->
         <main class="content">
@@ -124,8 +92,8 @@
                                 <span>
                                     {{ contacts[contactActive].name }}
                                 </span>
-                                <span class="hdr-span">
-                                    ultimo accesso oggi alle 10:35
+                                <span>
+                                    Online
                                 </span>
                             </div>
                         </li>

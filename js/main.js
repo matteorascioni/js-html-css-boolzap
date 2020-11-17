@@ -6,7 +6,7 @@ var app = new Vue({
     data: {
         // nostro account
         user: {
-            name: 'Nome Utente',
+            name: 'Michela',
             avatar: '_io',
         },
         // Elenco contatti
@@ -343,7 +343,7 @@ var app = new Vue({
                         status: 'received',
                     };
                     this.contacts[this.contactActive].messages.push(this.newMessage);
-                }, 1000);  
+                }, 2000);  
             }
         },
     }
