@@ -62,17 +62,55 @@
 
             <!-- Utenti chat -->
             <section class="utenti-chat">
-                <ul>
-                    <li v-for="(item, index) in contacts" 
-                        class="users"
-                        @click="contactAction(index)"
-                        >
-                        <img :src="'img/avatar' + item.avatar + '.jpg'" alt="">
-                        {{ item.name }} 
-                    </li>
-                </ul>
+                <div 
+                    v-for="(contact, index) in contacts"
+                    :class="['contact', index === contactActive ? 'active' : '']"
+                    @click="setActiveContact(index)"
+                    >
+                        <div class="users">
+                            <img 
+                                :src="`./img/avatar${contact.avatar}.jpg`" 
+                                :alt="contact.name"
+                            >
+                            <div class="info">
+                                    <span>{{ contact.name }}</span>
+                            </div>
+
+                        </div>
+
+                </div>
             </section>
         </aside>
+
+
+
+
+
+
+
+
+       
+
+ <!-- <ul 
+                    v-for="(item, index) in contacts" 
+                    :class="['contacts', index === contactActive ? 'active' : '']"
+                    @click="setActiveContact(index)"
+                >
+                    <li 
+                        class="users"
+                        @click="contactAction(index)"
+                    >
+                            <img :src="'img/avatar' + item.avatar + '.jpg'" alt="">
+                            {{ item.name }} 
+                    </li>
+                </ul>    -->
+
+
+
+
+
+
+
 
         <!-- Main message -->
         <main class="content">
@@ -104,20 +142,21 @@
             <section class="message">
                 <div 
                     v-for="message in contacts[contactActive].messages"
-                    :class="message.status == 'sent' ? 'justify-end': ''"
+                    :class="message.status == 'sent' ? 'justify-end': 'focus'"
                 >
                     <div 
                         class="bg-messages"
                         :class="message.status == 'sent' ? 'bg-green' : ''"  
                     >
-                        <div>
+                        <i class="fas fa-chevron-down"></i>
+                        <div class="text-messages">
                             <p class="mg-top">
-                                {{ message.message }}
+                                <span>{{ message.message }}</span>
                             </p>
                         </div>
                         <div>
                             <p class="text-right date-color">
-                                {{ message.date }} 
+                                <span>{{ message.date }}</span>
                             </p>
                         </div>
                     </div>   

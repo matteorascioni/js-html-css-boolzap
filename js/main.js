@@ -318,9 +318,14 @@ var app = new Vue({
         ]
     },
     methods: {
+        setActiveContact(index) {
+            this.contactActive = index;
+        },
+
         contactAction(index) {
             this.contactActive = index;
         },
+
         addMessage() {
             if(this.newMessageContent.trim() != '') {
                 this.contacts[this.contactActive].messages.push({

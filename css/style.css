@@ -283,7 +283,22 @@ input:focus {
 }
 
 .mg-top {
+    display: flex;
+    justify-content: space-between;
     margin-top: 11px;
+}
+
+.fa-chevron-down {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    opacity: 0;
+}
+
+.fa-chevron-down:hover {
+    font-size: 12px;
+    opacity: 1;
+    color: gray;
 }
 
 .text-right {
